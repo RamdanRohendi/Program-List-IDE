@@ -9,6 +9,9 @@ public class ModelIDE {
     private String bahasapemrograman;
     private String link;
 
+    // Ini adalah sebuah Constructor
+    // Constructor adalah fungsi yang pertama kali dijalankan
+    // Atau akan dijalankan apabila class ini dideklarasi dan diinisialisasikan
     public ModelIDE(int id, int logo, String nama, String penjelasan, String developer, String bahasapemrograman, String link) {
         this.id = id;
         this.logo = logo;

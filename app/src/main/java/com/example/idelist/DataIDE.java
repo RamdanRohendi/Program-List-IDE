@@ -34,10 +34,15 @@ public class DataIDE extends AppCompatActivity {
         data_bahasa_pemrograman = (TextView) findViewById(R.id.data_bahasa_pemrograman);
         btn_download = (Button) findViewById(R.id.btn_download);
 
+        // Disini data yang dikirimkan oleh activity sebelumnya diambil
+        // Dan di masukan ke sebuah variabel
         int id = getIntent().getExtras().getInt("id_IDE");
         link = "https://www.google.com";
+        // Disini variabel  ideList dimasukkan data
+        // Sesuai dengan isi ideList yang ada di class IDEAdapter
         ideList = IDEAdapter.ideList;
 
+        // Disini data di set berdasarkan data dari ID yang di kirimkan dari activity sebelumnya
         data_logo.setImageDrawable(this.getResources().getDrawable(ideList.get(id).getLogo()));
         data_nama.setText(ideList.get(id).getNama());
         data_penj.setText(ideList.get(id).getPenjelasan());
@@ -48,6 +53,7 @@ public class DataIDE extends AppCompatActivity {
         btn_download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Saat tombol di klik maka akan membuka browser dan menuju link yang telah dimasukkan
                 Intent bukaBrowser = new Intent(Intent.ACTION_VIEW);
                 bukaBrowser.setData(Uri.parse(link));
                 startActivity(bukaBrowser);
