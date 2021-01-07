@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">IDE LIst</string>
+
+    <!-- Android Studio -->
+    <string name="nama_andstu">Android Studio</string>
+    <string name="penj_andstu">Android Studio adalah Integrated Development Enviroment untuk sistem operasi Android, yang dibangun di atas perangkat lunak JetBrains IntelliJ IDEA dan didesain khusus untuk pengembangan Android.</string>
+    <string name="dev_andstu">Google, JetBrains</string>
+    <string name="prog_andstu">Java, Kotlin, C++</string>
+    <string name="link_andstu">https://developer.android.com/studio?hl=id</string>
+
+    <!-- Eclipse IDE-->
+    <string name="nama_eclipse">Eclipse IDE</string>
+    <string name="penj_eclipse">Eclipse adalah sebuah IDE untuk mengembangkan perangkat lunak dan dapat dijalankan di semua platform. Berikut ini adalah sifat dari Eclipse: Multi-platform: Target sistem operasi Eclipse adalah Microsoft Windows, Linux, Solaris, AIX, HP-UX dan Mac OS X.</string>
+    <string name="dev_eclipse">Eclipse Foundation</string>
+    <string name="prog_eclipse">Java, C</string>
+    <string name="link_eclipse">https://www.eclipse.org/downloads/</string>
+
+    <!-- Netbeans-->
+    <string name="nama_netbeans">Netbeans</string>
+    <string name="penj_netbeans">NetBeans adalah suatu serambi pengembangan perangkat lunak yang ditulis dalam bahasa pemrograman Java. Serambi Pada NetBeans, pengembangan suatu aplikasi dapat dilakukan dimulai dari setelan perangkat lunak modular bernama modules. Semula, aplikasi NetBeans IDE ini diperuntukkan bagi pengembangan dalam Java.</string>
+    <string name="dev_netbeans">Apache Software Foundation dan Oracle Corporation</string>
+    <string name="prog_netbeans">Java</string>
+    <string name="link_netbeans">https://netbeans.apache.org/download/index.html</string>
+
+    <!-- Microsoft Visual Studio-->
+    <string name="nama_vs">Microsoft Visual Studio</string>
+    <string name="penj_vs">Microsoft Visual Studio merupakan sebuah perangkat lunak lengkap yang dapat digunakan untuk melakukan pengembangan aplikasi, baik itu aplikasi bisnis, aplikasi personal, ataupun komponen aplikasinya, dalam bentuk aplikasi console, aplikasi Windows, ataupun aplikasi Web.</string>
+    <string name="dev_vs">Microsoft</string>
+    <string name="prog_vs">C#, C++, Visual Basic .NET, J#</string>
+    <string name="link_vs">https://visualstudio.microsoft.com/downloads/</string>
+
 </resources>
