@@ -14,7 +14,7 @@ import androidx.annotation.Nullable;
 import java.util.List;
 
 public class IDEAdapter extends ArrayAdapter<ModelIDE> {
-    List<ModelIDE> ideList;
+    static List<ModelIDE> ideList;
     Context context;
     int resource;
 

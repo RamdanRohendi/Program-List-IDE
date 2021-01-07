@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class DataIDE extends AppCompatActivity {
     ImageView data_logo;
     TextView data_nama;
@@ -18,6 +20,7 @@ public class DataIDE extends AppCompatActivity {
     TextView data_bahasa_pemrograman;
     Button btn_download;
     String link;
+    List<ModelIDE> ideList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,46 +34,16 @@ public class DataIDE extends AppCompatActivity {
         data_bahasa_pemrograman = (TextView) findViewById(R.id.data_bahasa_pemrograman);
         btn_download = (Button) findViewById(R.id.btn_download);
 
-        String nama = getIntent().getExtras().getString("IDEName");
+        int id = getIntent().getExtras().getInt("id_IDE");
         link = "https://www.google.com";
+        ideList = IDEAdapter.ideList;
 
-        switch (nama) {
-            case "Android Studio":
-                data_logo.setImageDrawable(this.getResources().getDrawable(R.drawable.logo_android_studio));
-                data_nama.setText(getString(R.string.nama_andstu));
-                data_penj.setText(getString(R.string.penj_andstu));
-                data_developer.setText(getString(R.string.dev_andstu));
-                data_bahasa_pemrograman.setText(getString(R.string.prog_andstu));
-                link = getString(R.string.link_andstu);
-                break;
-
-            case "Eclipse IDE":
-                data_logo.setImageDrawable(this.getResources().getDrawable(R.drawable.logo_eclipse));
-                data_nama.setText(getString(R.string.nama_eclipse));
-                data_penj.setText(getString(R.string.penj_eclipse));
-                data_developer.setText(getString(R.string.dev_eclipse));
-                data_bahasa_pemrograman.setText(getString(R.string.prog_eclipse));
-                link = getString(R.string.link_eclipse);
-                break;
-
-            case "Netbeans":
-                data_logo.setImageDrawable(this.getResources().getDrawable(R.drawable.logo_netbeans));
-                data_nama.setText(getString(R.string.nama_netbeans));
-                data_penj.setText(getString(R.string.penj_netbeans));
-                data_developer.setText(getString(R.string.dev_netbeans));
-                data_bahasa_pemrograman.setText(getString(R.string.prog_netbeans));
-                link = getString(R.string.link_netbeans);
-                break;
-
-            case "Microsoft Visual Studio":
-                data_logo.setImageDrawable(this.getResources().getDrawable(R.drawable.logo_visual_studio));
-                data_nama.setText(getString(R.string.nama_vs));
-                data_penj.setText(getString(R.string.penj_vs));
-                data_developer.setText(getString(R.string.dev_vs));
-                data_bahasa_pemrograman.setText(getString(R.string.prog_vs));
-                link = getString(R.string.link_vs);
-                break;
-        }
+        data_logo.setImageDrawable(this.getResources().getDrawable(ideList.get(id).getLogo()));
+        data_nama.setText(ideList.get(id).getNama());
+        data_penj.setText(ideList.get(id).getPenjelasan());
+        data_developer.setText(ideList.get(id).getDeveloper());
+        data_bahasa_pemrograman.setText(ideList.get(id).getBahasapemrograman());
+        link = ideList.get(id).getLink();
 
         btn_download.setOnClickListener(new View.OnClickListener() {
             @Override
